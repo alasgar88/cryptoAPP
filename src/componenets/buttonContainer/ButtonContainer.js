@@ -4,10 +4,12 @@ import { ArrowIndicator } from "../";
 import { BsFillBarChartLineFill } from "react-icons/bs";
 import { FaChartArea } from "react-icons/fa";
 import { BiDoughnutChart } from "react-icons/bi";
-import { useDispatch, useSelector } from "react-redux";
+import { AiOutlineLineChart } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
-const ButtonContainer = () => {
+const ButtonContainer = ({ type }) => {
   const { darkMode } = useSelector((store) => store.balance);
+  const icon = type !== "crypto" ? <FaChartArea /> : <AiOutlineLineChart />;
   return (
     <div className='button-container'>
       <ArrowIndicator
@@ -18,7 +20,7 @@ const ButtonContainer = () => {
       <div className={`bigCircle-container ${darkMode && "darkMode"}`}>
         <ArrowIndicator
           className='bigCircle'
-          icon={<FaChartArea />}
+          icon={icon}
           iconColor='white'
           backgroundColor='#6354B0'
           size='50px'
