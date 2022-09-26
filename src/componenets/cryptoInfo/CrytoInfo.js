@@ -9,7 +9,7 @@ const CrytoInfo = () => {
       <div className='chartBlock'>
         <ChartContainer />
         <ChartContainer />
-        <ButtonContainer type='crypto' />
+        <ButtonContainer />
       </div>
     </div>
   );

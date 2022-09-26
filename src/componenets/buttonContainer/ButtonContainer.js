@@ -9,7 +9,8 @@ import { useSelector } from "react-redux";
 
 const ButtonContainer = ({ type }) => {
   const { darkMode } = useSelector((store) => store.balance);
-  const icon = type !== "crypto" ? <FaChartArea /> : <AiOutlineLineChart />;
+  const { lightMode } = useSelector((store) => store.balance);
+  const icon = type === "balance" ? <FaChartArea /> : <AiOutlineLineChart />;
   return (
     <div className='button-container'>
       <ArrowIndicator
@@ -17,7 +18,11 @@ const ButtonContainer = ({ type }) => {
         circle={true}
         type='column2d'
       />
-      <div className={`bigCircle-container ${darkMode && "darkMode"}`}>
+      <div
+        className={`bigCircle-container ${
+          type === "balance" ? darkMode && "darkMode" : lightMode && "darkMode"
+        }`}
+      >
         <ArrowIndicator
           className='bigCircle'
           icon={icon}

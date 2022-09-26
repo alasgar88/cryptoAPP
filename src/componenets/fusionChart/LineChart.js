@@ -1,4 +1,3 @@
-import React from "react";
 import FusionCharts from "fusioncharts";
 import Charts from "fusioncharts/fusioncharts.charts";
 import ReactFC from "react-fusioncharts";
@@ -89,12 +88,12 @@ const LineChart = () => {
 
   const chartConfigs = {
     type: `${dataType === "area2d" ? "line" : dataType}`,
-    width: "112px",
-    height: "104px",
+    width: "115",
+    height: "104",
     dataFormat: "JSON",
     dataSource,
   };
-  return <ReactFC {...chartConfigs} className='fusionChart' />;
+  return <ReactFC {...chartConfigs} className='fusionChart ' />;
 };
 
 export default LineChart;

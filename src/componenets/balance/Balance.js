@@ -57,7 +57,7 @@ const Balance = () => {
       <div className='chart-container'>
         <Chart />
       </div>
-      <ButtonContainer />
+      <ButtonContainer type='balance' />
     </div>
   );
 };

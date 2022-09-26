@@ -6,8 +6,9 @@
 }
 // header
 .toggle.darkMode{
-    color: white !important;
+    color: rgb(226, 202, 202) !important;
 }
+
 .toggle-menu.darkMode{
     background: #4431A9 !important;
     border: 1px dotted white !important;
@@ -73,4 +74,12 @@
 .dashboard.cryptoinfo-dashboard .toggle-menu.lightMode{
     background: #E4EDF7 !important;
     border: 1px dotted #ABACDA !important;
+}
+
+.dashboard.cryptoinfo-dashboard .arrowIndicator{
+    box-shadow: 0 2px 8px 2px #7167a4 !important;
+}
+.dashboard.cryptoinfo-dashboard .bigCircle-container{
+    background:#392c9c !important;
+    box-shadow: inset 0px 5px 5px 0px #16068f !important;
 }
