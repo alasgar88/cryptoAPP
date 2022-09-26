@@ -1,0 +1,26 @@
+$mainPadding:0 25px;
+
+.button-container{
+    .bigCircle-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 68px;
+        height: 68px;
+        background:#b5c3e9;
+        box-shadow: inset 0px 5px 5px 0px #809dee ;
+    }
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: $mainPadding;
+    height: 60px;
+    margin-top: 10px;
+    &:nth-child(1){
+        align-self: flex-start;
+    }
+}
+
+
+

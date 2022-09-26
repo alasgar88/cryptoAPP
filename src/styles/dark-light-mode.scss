@@ -1,0 +1,76 @@
+// **** DARM MODE *** //
+
+// dashboard
+.dashboard.balance-dashboard.darkMode{
+    background: #4431A9 !important;
+}
+// header
+.toggle.darkMode{
+    color: white !important;
+}
+.toggle-menu.darkMode{
+    background: #4431A9 !important;
+    border: 1px dotted white !important;
+}
+
+// balance
+.balance.darkMode{
+    color:white !important
+}
+.select-data{
+    .select-box.darkMode{
+        color: white !important;
+        border: 1px solid white !important;
+        outline: none;
+    }
+}
+
+.balance-info.darkMode{
+    color: #E9BC17 !important ;
+
+}
+.balance-change.darkMode{
+    color: greenyellow !important ;
+}
+.amount.darkMode {
+    color:#E9BC17 !important ;
+}
+
+.info-container .title.darMode{
+    color:white !important;
+}
+
+// ArrowIndicator
+.arrowIndicator.darkMode{
+    box-shadow: 0 2px 8px 2px #7167a4 !important;
+}
+
+// button container
+.bigCircle-container.darkMode{
+    background:#392c9c !important;
+    box-shadow: inset 0px 5px 5px 0px #16068f !important;
+}
+
+
+
+// *** LIGTH MODE *** //
+.dashboard.cryptoinfo-dashboard .toggle {
+    color:white !important;
+}
+
+.dashboard.cryptoinfo-dashboard.lightMode{
+    background: #E4EDF7 !important;
+}
+.dashboard.cryptoinfo-dashboard .toggle.lightMode{
+    color: #ABACDA !important;
+}
+.dashboard.cryptoinfo-dashboard .toggle-menu{            
+    // background:#392c9c !important;
+    // box-shadow: inset 0px 5px 5px 0px #16068f !important;
+    background: transparent !important;
+    color: #ABACDA !important;
+}
+.dashboard.cryptoinfo-dashboard .toggle-menu.lightMode{
+    background: #E4EDF7 !important;
+    border: 1px dotted #ABACDA !important;
+}

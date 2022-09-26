@@ -1,0 +1,20 @@
+$infoColor:#736CB7;
+
+.arrowIndicator{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px 5px #CFD9E3;
+    &:nth-of-type(2){
+    align-self: flex-start;
+}
+    .icon{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        font-size: 18px;
+    }
+}
+
