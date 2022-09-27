@@ -8,7 +8,7 @@ import "./fusion-chart.scss";
 ReactFC.fcRoot(FusionCharts, Charts, FusionTheme);
 
 const LineChart = () => {
-  const { dataType } = useSelector((store) => store.balance);
+  const { cryptoChartType } = useSelector((store) => store.balance);
   const { lightMode } = useSelector((store) => store.balance);
   const dataSource = {
     chart: {
@@ -87,7 +87,7 @@ const LineChart = () => {
   };
 
   const chartConfigs = {
-    type: `${dataType === "area2d" ? "line" : dataType}`,
+    type: `${cryptoChartType}`,
     width: "115",
     height: "104",
     dataFormat: "JSON",

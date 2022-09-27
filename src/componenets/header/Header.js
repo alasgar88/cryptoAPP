@@ -15,7 +15,6 @@ const Header = ({ type }) => {
   const { darkMode } = useSelector((store) => store.balance);
   const { lightMode } = useSelector((store) => store.balance);
   const dispatch = useDispatch();
-
   const handleClick = () => {
     setShow(!show);
     setTimeout(() => {

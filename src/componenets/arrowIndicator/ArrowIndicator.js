@@ -2,7 +2,10 @@ import React from "react";
 import "./arrowindicator.scss";
 import { LightenDarkenColor } from "../../utils/utils";
 import { useDispatch, useSelector } from "react-redux";
-import { setDataType } from "../../feautures/balance/balanceSlice";
+import {
+  setChartType,
+  setCryptoChartType,
+} from "../../feautures/balance/balanceSlice";
 
 const ArrowIndicator = ({
   icon,
@@ -11,22 +14,30 @@ const ArrowIndicator = ({
   size,
   circle,
   type,
+  mode,
 }) => {
   const { darkMode } = useSelector((store) => store.balance);
+  const { lightMode } = useSelector((store) => store.balance);
   // backgroundColor must be in hex format (including #)
   const lighterBackground = LightenDarkenColor(backgroundColor, 50);
   const darkerBorder = LightenDarkenColor(backgroundColor, 30);
 
   const dispatch = useDispatch();
 
-  const sendDataType = () => {
-    dispatch(setDataType(type));
+  const sendChart = () => {
+    if (mode === "balance") {
+      dispatch(setChartType(type));
+    } else {
+      dispatch(setCryptoChartType(type));
+    }
   };
 
   return (
     <div
-      className={`arrowIndicator ${darkMode && "darkMode"}`}
-      onClick={sendDataType}
+      className={`arrowIndicator ${
+        mode === "balance" ? darkMode && "darkMode" : lightMode && "lightMode"
+      }`}
+      onClick={sendChart}
       style={{
         color: iconColor,
         background: `linear-gradient(to bottom, ${backgroundColor},${lighterBackground})`,

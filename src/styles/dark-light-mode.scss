@@ -55,19 +55,18 @@
 
 
 // *** LIGTH MODE *** //
+.dashboard.cryptoinfo-dashboard.lightMode{
+    background: #E4EDF7 !important;
+}
+
 .dashboard.cryptoinfo-dashboard .toggle {
     color:white !important;
 }
 
-.dashboard.cryptoinfo-dashboard.lightMode{
-    background: #E4EDF7 !important;
-}
 .dashboard.cryptoinfo-dashboard .toggle.lightMode{
     color: #ABACDA !important;
 }
 .dashboard.cryptoinfo-dashboard .toggle-menu{            
-    // background:#392c9c !important;
-    // box-shadow: inset 0px 5px 5px 0px #16068f !important;
     background: transparent !important;
     color: #ABACDA !important;
 }
@@ -76,10 +75,25 @@
     border: 1px dotted #ABACDA !important;
 }
 
+
+.dashboard.cryptoinfo-dashboard .bigCircle-container{
+    background:#392c9c;
+    box-shadow: inset 0px 5px 5px 0px #16068f;
+}
+
+
+.dashboard.cryptoinfo-dashboard .bigCircle-container.lightMode{
+    background: #b5c3e9 !important;
+    box-shadow: inset 0px 5px 5px 0px #809dee !important;
+}
+
 .dashboard.cryptoinfo-dashboard .arrowIndicator{
     box-shadow: 0 2px 8px 2px #7167a4 !important;
 }
-.dashboard.cryptoinfo-dashboard .bigCircle-container{
-    background:#392c9c !important;
-    box-shadow: inset 0px 5px 5px 0px #16068f !important;
+
+.dashboard.cryptoinfo-dashboard .arrowIndicator.lightMode{
+    box-shadow: 0 3px 8px 5px #CFD9E3 !important;
 }
+
+
+

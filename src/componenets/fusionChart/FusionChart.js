@@ -9,7 +9,7 @@ import "./fusion-chart.scss";
 ReactFC.fcRoot(FusionCharts, Charts, FusionTheme);
 
 const Chart = () => {
-  const { dataType } = useSelector((store) => store.balance);
+  const { chartType } = useSelector((store) => store.balance);
   const { darkMode } = useSelector((store) => store.balance);
   const dataSource = {
     chart: {
@@ -89,7 +89,7 @@ const Chart = () => {
   };
 
   const chartConfigs = {
-    type: `${dataType}`,
+    type: `${chartType}`,
     width: "100%",
     height: "33%",
     dataFormat: "JSON",

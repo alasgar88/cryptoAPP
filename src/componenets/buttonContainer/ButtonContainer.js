@@ -7,20 +7,26 @@ import { BiDoughnutChart } from "react-icons/bi";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { useSelector } from "react-redux";
 
-const ButtonContainer = ({ type }) => {
+const ButtonContainer = ({ type, mode }) => {
   const { darkMode } = useSelector((store) => store.balance);
   const { lightMode } = useSelector((store) => store.balance);
   const icon = type === "balance" ? <FaChartArea /> : <AiOutlineLineChart />;
+  console.log(
+    type === "balance" ? darkMode && "darkMode" : lightMode && "lightMode",
+    type
+  );
   return (
     <div className='button-container'>
       <ArrowIndicator
         icon={<BsFillBarChartLineFill />}
         circle={true}
         type='column2d'
+        mode={mode}
       />
+
       <div
         className={`bigCircle-container ${
-          type === "balance" ? darkMode && "darkMode" : lightMode && "darkMode"
+          type === "balance" ? darkMode && "darkMode" : lightMode && "lightMode"
         }`}
       >
         <ArrowIndicator
@@ -30,13 +36,16 @@ const ButtonContainer = ({ type }) => {
           backgroundColor='#6354B0'
           size='50px'
           circle={true}
-          type='area2d'
+          // type='area2d'
+          type={`${mode === "balance" ? "area2d" : "line"}`}
+          mode={mode}
         />
       </div>
       <ArrowIndicator
         icon={<BiDoughnutChart />}
         circle={true}
         type='doughnut3d'
+        mode={mode}
       />
     </div>
   );

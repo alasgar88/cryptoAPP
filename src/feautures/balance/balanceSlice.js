@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   darkMode: false,
   lightMode: false,
-  dataType: "area2d",
+  chartType: "area2d",
+  cryptoChartType: "line",
 };
 
 const balanceSlice = createSlice({
@@ -16,13 +17,21 @@ const balanceSlice = createSlice({
     toggleLightMode: (state) => {
       state.lightMode = !state.lightMode;
     },
-    setDataType: (state, { payload }) => {
-      state.dataType = payload;
+    setChartType: (state, { payload }) => {
+      state.chartType = payload;
+    },
+    setCryptoChartType: (state, { payload }) => {
+      console.log(payload);
+      state.cryptoChartType = payload;
     },
   },
 });
 
-export const { toggleDarkMode, toggleLightMode, setDataType } =
-  balanceSlice.actions;
+export const {
+  toggleDarkMode,
+  toggleLightMode,
+  setCryptoChartType,
+  setChartType,
+} = balanceSlice.actions;
 
 export default balanceSlice.reducer;
