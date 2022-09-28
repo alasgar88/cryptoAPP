@@ -14,9 +14,20 @@ const LineChart = () => {
     chart: {
       setadaptiveymin: "1",
       // label config
-      showLabels: "0",
-      showYAxisValues: "0",
+      // showLabels: "0",
+      // showYAxisValues: "0",
       // colors
+
+      // remove later
+      // label config
+      labelFontSize: "0.5rem",
+      staggerLines: "0",
+      labelStep: "3",
+      // fonts
+      baseFontSize: "0.5rem",
+      numbersuffix: "$",
+      // end remove later
+
       theme: "fusion",
       lineThickness: "2",
       bgColor: `${lightMode ? "#E4EDF7" : "#4431A9"}`,
@@ -88,8 +99,8 @@ const LineChart = () => {
 
   const chartConfigs = {
     type: `${cryptoChartType}`,
-    width: "115",
-    height: "104",
+    width: "200",
+    height: "110",
     dataFormat: "JSON",
     dataSource,
   };

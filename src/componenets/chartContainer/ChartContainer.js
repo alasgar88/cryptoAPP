@@ -7,7 +7,6 @@ const ChartContainer = () => {
     <div className='chartContainer'>
       <div className='crypto-container'></div>
       <LineChart />
-
       <div className='crypto-container'></div>
     </div>
   );
