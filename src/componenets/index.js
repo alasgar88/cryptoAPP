@@ -1,4 +1,3 @@
-import Form from "./form/Form";
 import CrytoInfo from "./cryptoInfo/CrytoInfo";
 import Balance from "./balance/Balance";
 import Header from "./header/Header";
@@ -10,7 +9,6 @@ import LineChart from "./fusionChart/LineChart";
 import ChartContainer from "./chartContainer/ChartContainer";
 
 export {
-  Form,
   CrytoInfo,
   Balance,
   Header,
